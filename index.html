@@ -1,27 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+    href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap”
+    rel=“stylesheet”>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sakumomo Design</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/46bcc8fb5c.js" crossorigin="anonymous"></script></head> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <script src="scripts/jquery.bxslider.min.js"></script>
+    <link href="styles/vendors/jquery.bxslider.css" rel="stylesheet" />
+  </head>
+  <body>
     <header>
-        <div class="content_wrapper">
-            <h1>Sakumomo Design</h1>
-            <div class="nav_wrapper">
-                <nav>
-                    <ul>
-                        <li><a href="#">Concept</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="content_wrapper">
+        <h1>Sakumomo Design</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Concept</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <!--hamburgerボタンー-->
+        <div class="hamburger-btn">
+          <span class="hamburger-btn__parts -top"></span>
+          <span class="hamburger-btn__parts -middle"></span>
+          <span class="hamburger-btn__parts -bottom"></span>
         </div>
+        <!--hamburgerメニュー-->
+        <nav class="hamburger">
+          <ul class="hamburger__lists">
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+            </li>
+            <li class="hamburger__list">
+              <a class="hamburger__link" href="#">ハンバーガーメニュー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-</body>
+    <div class="mainview">
+        <ul class="bxslider">
+          <li><img src="img/fv-bgi_01.jpg" alt="メイン画像1" /></li>
+          <li><img src="img/fv-bgi_02.jpg" alt="メイン画像2" /></li>
+          <li><img src="img/fv-bgi_03.jpg" alt="メイン画像3" /></li>
+        </ul>
+        <div class="main_title">
+          <h2>Design for Smile.</h2>
+          <p>〜快適なオフィスをデザインする〜</p>
+        </div>
+    </div>
+    <section class="concept">
+      <div class="content_wrapper">
+        <h2 class="section_title">Concept</h2>
+        <h3>
+          “働きたくなる空間”をデザインすることで<br />
+          人々を幸せにする。
+        </h3>
+        <div class="concept_center">
+          <p class="concept_text">
+            私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Sakumomo
+            Designだからこそできる空間デザインを提供させていただきます。
+          </p>
+          <img src="img/concept-image.jpg" alt="コンセプト画像" />
+        </div>
+      </div>
+      <h2 class="section_under">Our Concept</h2>
+    </section>
+    <section class="works">
+      <div class="content_wrapper">
+        <h2 class="section_title">Works</h2>
+        <ul>
+          <li>
+            <img src="img/card-img01.jpg" alt="worksイメージ1" />
+            <p>
+              新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
+            </p>
+          </li>
+          <li>
+            <img src="img/card-img02.jpg" alt="worksイメージ2" />
+            <p>新規サイトを公開しました。今回のサイトは白と黒を基調にした</p>
+          </li>
+          <li>
+            <img src="img/card-img03.jpg" alt="worksイメージ3" />
+            <p>
+              新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
+            </p>
+          </li>
+        </ul>
+        <div class="btn">
+          <a href="#">View more</a>
+        </div>
+        <h2 class="section_under">Our Works</h2>
+      </div>
+    </section>
+    <section class="service">
+      <h2 class="section_title">Service</h2>
+      <div class="service_items">
+        <div class="item">
+          <a href="#">
+            <img src="img/service-img01.jpg" alt="Hearing" />
+            <p>Hearing</p>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="img/service-img02.jpg" alt="Planning" />
+            <p>Planning</p>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img src="img/sevice-img03.jpg" alt="Direction" />
+            <p>Direction</p>
+          </a>
+        </div>
+      </div>
+      <h2 class="section_under">Our Service</h2>
+    </section>
+    <section class="contact">
+      <div class="content_wrapper">
+        <h2 class="section_title">Contact</h2>
+        <p>お気軽にご相談ください。</p>
+        <div class="btn">
+          <a href="#">Contact</a>
+        </div>
+        <h2 class="section_under">Contact us</h2>
+      </div>
+    </section>
+    <footer>
+      <small>©︎sakumomo.design all rights reserved</small>
+    </footer>
+  </body>
 </html>
