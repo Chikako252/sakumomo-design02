@@ -203,18 +203,14 @@ nav__list {
           transform: translateX(0);
 }
 
-.slider {
-  overflow: hidden;
+.mainview {
   position: relative;
-  min-width: 960px;
-  height: 752px;
 }
 
-.slider img {
-  display: none;
-  position: absolute;
-  left: 50%;
-  margin-left: -800px;
+.mainview img {
+  height: 752px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .main_title {
