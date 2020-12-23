@@ -43,6 +43,7 @@ $mb: 768px; //スマホ
 }
 body {
   max-width: 1440px;
+  margin: 0 auto;
   letter-spacing: 0.1em;
   color: $color-black;
   font-family: $font-main;
@@ -67,10 +68,13 @@ li {
 //*  header
 //*------------------*
 header {
+  max-width: 1440px;
+  width: 100%;
   height: 96px;
   line-height: 96px;
   background-color: $color-black;
-  z-index: 10;
+  position: fixed;
+  z-index: 1;
   font-style: italic;
   font-weight: normal;
   .content_wrapper {
@@ -94,9 +98,16 @@ header {
       }
     }
   }
-
-  @include mobile {
-    background-color: rgba($color-black, 0.7);
+}
+@include mobile {
+  header {
+    width: 100%;
+    background-color: $color-black;
+    position: static;
+    h1 {
+      @include rem(26);
+      margin-left: 4vw;
+    }
   }
 }
 
@@ -215,9 +226,13 @@ nav {
 .mainview {
   position: relative;
   img {
+    width: 100%;
     height: 752px;
     -o-object-fit: cover;
     object-fit: cover;
+  }
+  .mainimg_sp {
+    display: none;
   }
 }
 
@@ -227,10 +242,27 @@ nav {
   left: 7%;
   color: $color-white;
   h2 {
-    font-size: 70px;
+    @include rem(70);
   }
   p {
-    font-size: 40px;
+    @include rem(40);
+  }
+}
+
+@include mobile {
+  .mainimg_sp {
+    display: block;
+    height: 599px;
+    position: relative;
+  }
+  .main_title {
+    position: absolute;
+    h2 {
+      @include rem(37);
+    }
+    p {
+      @include rem(30);
+    }
   }
 }
 
@@ -244,7 +276,7 @@ nav {
   }
   h3 {
     text-align: center;
-    font-size: 30px;
+    @include rem(30);
     margin-top: 70px;
   }
 }
@@ -252,7 +284,7 @@ nav {
   display: flex;
   align-items: center;
   color: $color-black;
-  font-size: 60px;
+  @include rem(60);
   font-style: italic;
   &:after {
     border-top: 4px solid $color-black;
@@ -263,15 +295,16 @@ nav {
 }
 .concept_center {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-top: 60px;
   .concept_text {
-    width: 440px;
+    max-width: 440px;
     font-weight: bold;
   }
   img {
-    width: 440px;
+    max-width: 440px;
   }
 }
 .section_under {
@@ -284,6 +317,30 @@ nav {
   margin-bottom: 70px;
 }
 
+@include mobile {
+  .concept {
+    .content_wrapper {
+      margin: 0 4vw;
+    }
+
+    .section_title {
+      @include rem(30);
+    }
+    h3 {
+      @include rem(20);
+    }
+    img {
+      margin-top: 30px;
+    }
+  }
+  .concept_center {
+    flex-direction: column;
+  }
+  .section_under {
+    @include rem(40);
+    margin-right: 4vw;
+  }
+}
 //*------------------*
 //*  works
 //*------------------*
@@ -308,6 +365,7 @@ nav {
   ul {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
     li {
@@ -328,10 +386,33 @@ nav {
   background-color: #f7d43f;
   box-shadow: #1b1310;
   margin: 80px auto 70px;
+  &:hover {
+    opacity: 0.5;
+  }
   a {
     color: $color-black;
     padding-left: 71px;
     display: block;
+  }
+}
+
+@include mobile {
+  .works {
+    padding: 100px 4vw 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      margin-top: 30px;
+    }
+    .section_title {
+      @include rem(30);
+    }
+    .section_under {
+      font-size: 40px;
+    }
   }
 }
 
@@ -345,6 +426,7 @@ nav {
   }
   .service_items {
     display: flex;
+    flex-wrap: wrap;
     .item {
       position: relative;
       p {
@@ -360,15 +442,34 @@ nav {
         font-style: italic;
         color: $color-white;
       }
-      img {
-        width: 480px;
-        height: 320px;
-      }
       a {
         &:hover {
           opacity: 0.5;
         }
       }
+    }
+  }
+}
+
+@include mobile {
+  .service {
+    .section_title {
+      margin: 0 4vw 80px;
+      @include rem(30);
+    }
+    .service_items {
+      display: flex;
+      flex-direction: column;
+      .item {
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .section_under {
+      margin-top: 40px;
+      margin-right: 4vw;
     }
   }
 }
@@ -401,6 +502,20 @@ nav {
     padding-bottom: 70px;
     color: $color-white;
     margin: 0;
+  }
+}
+
+@include mobile {
+  .contact {
+    .content_wrapper {
+      margin: 0 4vw;
+    }
+    .section_title {
+      @include rem(30);
+    }
+    p {
+      @include rem(20);
+    }
   }
 }
 //*------------------*
